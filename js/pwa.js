@@ -1,4 +1,4 @@
-/* DiKonnect PWA helper — shared by default.html and main.html.
+/* DiKonnect PWA helper — shared by index.html and main.html.
    Policy:
    - Desktop  → use the website normally (no gate, no install button).
    - Mobile   → PWA ONLY: a browser tab shows a full-screen gate that asks
