@@ -3,7 +3,7 @@
   "short_name": "DiKonnect",
   "description": "Dealer Dialogue, Pichon-kun AI chatbot, DiCompare and DiFind — the Daikin AI platform for dealers, affiliates and employees.",
   "id": "./",
-  "start_url": "default.html",
+  "start_url": "index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
