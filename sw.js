@@ -5,7 +5,7 @@
    Open PWAs poll version.json, detect the change, fetch this new sw.js,
    pre-cache the new files and reload themselves automatically. */
 
-const APP_VERSION = "1.0.9";
+const APP_VERSION = "1.1.0";
 const CACHE_NAME = "dikonnect-" + APP_VERSION;
 
 /* app shell — cached on install so the PWA works offline */
