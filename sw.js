@@ -1,4 +1,4 @@
-/* DiKonnect service worker.
+/* DiOne service worker.
    HOW TO RELEASE AN UPDATE:
    1. Bump APP_VERSION below.
    2. Set the same version in version.json.
@@ -6,7 +6,7 @@
    pre-cache the new files and reload themselves automatically. */
 
 const APP_VERSION = "1.1.0";
-const CACHE_NAME = "dikonnect-" + APP_VERSION;
+const CACHE_NAME = "dione-" + APP_VERSION;
 
 /* app shell — cached on install so the PWA works offline */
 const SHELL = [
@@ -41,7 +41,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
       Promise.all(
-        keys.filter((k) => k.startsWith("dikonnect-") && k !== CACHE_NAME)
+        keys.filter((k) => k.startsWith("dione-") && k !== CACHE_NAME)
             .map((k) => caches.delete(k))
       )
     ).then(() => self.clients.claim())

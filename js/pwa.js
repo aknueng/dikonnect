@@ -1,4 +1,4 @@
-/* DiKonnect PWA helper — shared by index.html and main.html.
+/* DiOne PWA helper — shared by index.html and main.html.
    Policy:
    - Desktop  → use the website normally (no gate, no install button).
    - Mobile   → PWA ONLY: a browser tab shows a full-screen gate that asks
@@ -69,8 +69,8 @@
     return window.matchMedia("(display-mode: standalone)").matches ||
            window.navigator.standalone === true;   /* iOS Safari */
   }
-  function markInstalled(){ try { localStorage.setItem("dikonnect.pwa.installed", "1"); } catch(e){} }
-  function clearInstalled(){ try { localStorage.removeItem("dikonnect.pwa.installed"); } catch(e){} }
+  function markInstalled(){ try { localStorage.setItem("dione.pwa.installed", "1"); } catch(e){} }
+  function clearInstalled(){ try { localStorage.removeItem("dione.pwa.installed"); } catch(e){} }
 
   function getInstallState(){
     return new Promise(function(resolve){
@@ -81,7 +81,7 @@
         return resolve(state);
       }
       try {
-        if (localStorage.getItem("dikonnect.pwa.installed") === "1"){
+        if (localStorage.getItem("dione.pwa.installed") === "1"){
           state.installed = true; state.source = "remembered";
           return resolve(state);
         }
@@ -95,30 +95,30 @@
     });
   }
   /* callable from anywhere, e.g. the console:
-     getDiKonnectInstallState().then(console.log) */
-  window.getDiKonnectInstallState = getInstallState;
+     getDiOneInstallState().then(console.log) */
+  window.getDiOneInstallState = getInstallState;
 
   /* ---------- mobile gate: the site is usable only inside the PWA ---------- */
   function showAppGate(installed){
     var gate = document.querySelector(".pwa-gate") || document.createElement("div");
     gate.className = "pwa-gate";
-    var html = '<img src="sources/img/logo.png" alt="DiKonnect">';
+    var html = '<img src="sources/img/logo.png" alt="DiOne">';
     if (installed){
       html +=
-        "<h1>Please open the DiKonnect app</h1>" +
-        "<p>DiKonnect is installed on this device, so it can only be used from the app. " +
-        "Open <strong>DiKonnect</strong> from your home screen to continue.</p>" +
+        "<h1>Please open the DiOne app</h1>" +
+        "<p>DiOne is installed on this device, so it can only be used from the app. " +
+        "Open <strong>DiOne</strong> from your home screen to continue.</p>" +
         "<p>Demo build for YSSA group C only.</p>";
     } else {
       html +=
-        "<h1>Install the DiKonnect app</h1>" +
-        "<p>On mobile, DiKonnect runs as an app. Install it once and use it from your home screen.</p>" +
+        "<h1>Install the DiOne app</h1>" +
+        "<p>On mobile, DiOne runs as an app. Install it once and use it from your home screen.</p>" +
         "<p>Demo build for YSSA group C only.</p>" +
         (isIOS
           ? '<p class="gate-hint">iPhone / iPad: Click <strong>Share</strong> > Select <strong>Add to Home Screen</strong></p>'
           : '<button type="button" class="pwa-install" id="gateInstallBtn">' +
             '<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-            "Install DiKonnect</button>");
+            "Install DiOne</button>");
     }
     gate.innerHTML = html;
     document.body.appendChild(gate);
@@ -140,8 +140,8 @@
     if (st.runningAsApp){
       /* inside the app — greet once per session */
       try {
-        if (sessionStorage.getItem("dikonnect.pwa.greeted")) return;
-        sessionStorage.setItem("dikonnect.pwa.greeted", "1");
+        if (sessionStorage.getItem("dione.pwa.greeted")) return;
+        sessionStorage.setItem("dione.pwa.greeted", "1");
       } catch(e){}
       toast("Running as installed app ✓", false, 2500);
       return;
@@ -162,7 +162,7 @@
   window.addEventListener("appinstalled", function(){
     markInstalled();
     hideToast();
-    toast("DiKonnect installed ✓ — open it from your home screen", false, 4000);
+    toast("DiOne installed ✓ — open it from your home screen", false, 4000);
     if (isMobile) showAppGate(true);       /* browser tab stays blocked */
   });
 
@@ -176,7 +176,7 @@
       nw.addEventListener("statechange", function(){
         /* new version installed while an old one controls the page → switch over */
         if (nw.state === "installed" && navigator.serviceWorker.controller){
-          toast("Updating DiKonnect to the latest version…", true);
+          toast("Updating DiOne to the latest version…", true);
           nw.postMessage({ type: "SKIP_WAITING" });
         }
       });

@@ -60,7 +60,7 @@
   function clearMsg(el){ el.textContent = ""; el.className = "msg"; }
 
   function finishLogin(session){
-    try { sessionStorage.setItem("dikonnect.session", JSON.stringify(session)); } catch(e){}
+    try { sessionStorage.setItem("dione.session", JSON.stringify(session)); } catch(e){}
     setTimeout(function(){ try { window.location.href = "main.html"; } catch(e){} }, 900);
   }
 
