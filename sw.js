@@ -10,7 +10,7 @@ const CACHE_NAME = "dikonnect-" + APP_VERSION;
 
 /* app shell — cached on install so the PWA works offline */
 const SHELL = [
-  "default.html",
+  "index.html",
   "main.html",
   "css/login.css",
   "css/main.css",
@@ -76,7 +76,7 @@ self.addEventListener("fetch", (event) => {
       })
       .catch(() =>
         caches.match(req).then((hit) => hit ||
-          (req.mode === "navigate" ? caches.match("default.html") : undefined))
+          (req.mode === "navigate" ? caches.match("index.html") : undefined))
       )
   );
 });
