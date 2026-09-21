@@ -1,0 +1,23 @@
+{
+  "name": "DiKonnect — A Daikin AI Platform",
+  "short_name": "DiKonnect",
+  "description": "Dealer Dialogue, Pichon-kun AI chatbot, DiCompare and DiFind — the Daikin AI platform for dealers, affiliates and employees.",
+  "id": "./",
+  "start_url": "default.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#13284A",
+  "background_color": "#F4F8FF",
+  "lang": "en",
+  "prefer_related_applications": false,
+  "related_applications": [
+    { "platform": "webapp", "url": "https://scm.dci.co.th/dikonnect/manifest.json" }
+  ],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

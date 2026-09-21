@@ -1,0 +1,102 @@
+{
+  "dialogues": [
+    {
+      "title": "Sharing: bracket jig for high-wall units — cut install time by ~15 min",
+      "body": "We made a simple alignment jig for marking high-wall bracket holes — level, drill points and sleeve centre in one template. It has saved us roughly 15 minutes per install and the plates come out perfectly level every time. Photos attached, happy to share the dimensions.",
+      "author": "Mr.Saige Fuentes",
+      "company": "Bangkok Air Service Co., Ltd.",
+      "country": "Thailand",
+      "category": "Installation",
+      "date": "2026-05-18",
+      "status": "answered",
+      "image": "sources/img/001.png",
+      "replies": [
+        {
+          "author": "Mr.Marceline Avila",
+          "company": "Daikin Australia Pty. Ltd.",
+          "country": "Australia",
+          "date": "2026-05-20",
+          "text": "Nice work — we laser-cut a similar template from 3 mm acrylic. Adding the sleeve centre is a good idea, we'll copy that. Would you mind posting the hole spacing you used for the FTXM series?"
+        }
+      ]
+    },
+    {
+      "title": "Pipe sizing for FCA100CVMA on a 35 m run — confirm Ø9.5 / Ø15.9?",
+      "body": "Long run from a shop floor cassette to a rooftop condenser (about 35 m equivalent length, 12 m height difference). Am I right that the FCA100CVMA stays on Ø9.5 mm liquid / Ø15.9 mm gas at this length, and do I need an additional refrigerant charge?",
+      "author": "Mr.Bowen Higgins",
+      "company": "Merlion HVAC Solutions Pte. Ltd.",
+      "country": "Singapore",
+      "category": "Parts & Piping",
+      "date": "2026-06-30",
+      "status": "answered",
+      "image": "sources/img/004.jpg",
+      "replies": [
+        {
+          "author": "Mr.Kylan Gentry",
+          "company": "Daikin Airconditioning Vietnam JSC",
+          "country": "Viet Nam",
+          "date": "2026-07-01",
+          "text": "Correct sizes — Ø9.5 liquid / Ø15.9 gas. Beyond 30 m you add refrigerant per the charge table in the installation manual. We ran a 40 m job last year with no issues; just watch the oil-trap spacing on the vertical riser."
+        }
+      ]
+    },
+    {
+      "title": "Error E4 on RXM20UVMZ after a storm — diagnosis steps?",
+      "body": "Customer's RXM20UVMZ trips on E4 after heavy rain, resets, then trips again within the hour. Before I head out tomorrow — what's your go-to diagnosis order for this one?",
+      "author": "Mr.Marceline Avila",
+      "company": "Daikin Australia Pty. Ltd.",
+      "country": "Australia",
+      "category": "Service & Errors",
+      "date": "2026-07-22",
+      "status": "answered",
+      "replies": [
+        {
+          "author": "Mr.Saige Fuentes",
+          "company": "Bangkok Air Service Co., Ltd.",
+          "country": "Thailand",
+          "date": "2026-07-23",
+          "text": "After storms I always check the outdoor PCB and the pressure-switch connector for moisture first — dry it out and retest before touching refrigerant. If it still trips, verify the charge and the coil is clear. Pichon-kun will give you the full E4 procedure from the service manual if you paste the model number."
+        }
+      ]
+    },
+    {
+      "title": "Unusual install: condensation behind the mounting plate on a double-brick heritage wall",
+      "body": "We're installing an FTXM25UVMZ on a double-brick heritage wall and in the wet season condensation forms behind the mounting plate, staining the paint. Has anyone encountered something similar and found a fix that doesn't damage the wall?",
+      "author": "Mr.Saige Fuentes",
+      "company": "Bangkok Air Service Co., Ltd.",
+      "country": "Thailand",
+      "category": "Installation",
+      "date": "2026-08-05",
+      "status": "answered",
+      "image": "sources/img/002.jpg",
+      "replies": [
+        {
+          "author": "Mr.Bowen Higgins",
+          "company": "Merlion HVAC Solutions Pte. Ltd.",
+          "country": "Singapore",
+          "date": "2026-08-06",
+          "text": "We hit exactly this on old shophouse walls. We now fit a 6 mm spacer frame behind the mounting plate so air can circulate, and seal the wall penetration with closed-cell foam. No call-backs since."
+        },
+        {
+          "author": "Mr.Kylan Gentry",
+          "company": "Daikin Airconditioning Vietnam JSC",
+          "country": "Viet Nam",
+          "date": "2026-08-07",
+          "text": "+1 on the spacer frame. Also re-check that the wall sleeve slopes outward — on two of our jobs the 'wall condensation' was actually drain water tracking back through a level sleeve."
+        }
+      ]
+    },
+    {
+      "title": "Coastal sites: how do you set customer expectations on corrosion and warranty?",
+      "body": "We install a lot within 500 m of the beach. Even with anti-corrosion treatment, coastal units age faster and customers push back at warranty time. How do other dealers word this up front — do you put it in the quote, a signed note, or just explain verbally?",
+      "author": "Mr.Kylan Gentry",
+      "company": "Daikin Airconditioning Vietnam JSC",
+      "country": "Viet Nam",
+      "category": "General",
+      "date": "2026-09-02",
+      "status": "open",
+      "image": "sources/img/005.jpg",
+      "replies": []
+    }
+  ]
+}

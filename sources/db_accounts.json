@@ -1,0 +1,53 @@
+{
+  "countries": [
+    "Thailand", "Singapore", "Philippines", "Indonesia", "Cambodia",
+    "Australia", "Viet Nam", "Malaysia", "India", "Tanzania", "New Zealand"
+  ],
+  "accounts": [
+    {
+      "type": "dealer",
+      "username": "dealer01",
+      "password": "Dealer#2026",
+      "passcode": "123456",
+      "country": "Thailand",
+	  "fullname": "Mr.Saige Fuentes",
+      "displayName": "Bangkok Air Service Co., Ltd."
+    },
+    {
+      "type": "dealer",
+      "username": "dealer02",
+      "password": "Dealer#2026",
+      "passcode": "222222",
+      "country": "Singapore",
+	  "fullname": "Mr.Bowen Higgins",
+      "displayName": "Merlion HVAC Solutions Pte. Ltd."
+    },
+    {
+      "type": "affiliate",
+      "username": "affiliate01",
+      "password": "Affil#2026",
+      "passcode": "654321",
+      "country": "Viet Nam",
+	  "fullname": "Mr.Kylan Gentry",
+      "displayName": "Daikin Airconditioning Vietnam JSC"
+    },
+    {
+      "type": "affiliate",
+      "username": "affiliate02",
+      "password": "Affil#2026",
+      "passcode": "888888",
+      "country": "Australia",
+	  "fullname": "Mr.Marceline Avila",
+      "displayName": "Daikin Australia Pty. Ltd."
+    },
+    {
+      "type": "employee",
+      "sso": "okta",
+      "username": "aukit.k@dci.daikin.co.jp",
+      "displayName": "Daikin Employee (Okta Verify SSO)",
+	  "country": "Thailand",
+	  "fullname": "Mr.Aukit Karoon",
+      "note": "Employees authenticate via Okta Verify SSO."
+    }
+  ]
+}
