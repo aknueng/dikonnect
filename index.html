@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in — DiKonnect</title>
+<link rel="stylesheet" href="css/login.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#13284A">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- mobile-only brand bar -->
+  <div class="mobile-brand">
+    <img class="mark" src="sources/img/logo.png" alt="DiKonnect logo" width="36" height="36">
+    <div class="txt">DiKonnect<span>A  Daikin  AI  Platform</span></div>
+  </div>
+
+  <!-- left: brand -->
+  <aside class="hero">
+    <div class="brand">
+      <img class="mark" src="sources/img/logo.png" alt="DiKonnect logo" width="44" height="44">
+      <div class="txt">DiKonnect<span>A  Daikin  AI  Platform</span></div>
+    </div>
+
+    <div class="hero-body">
+      <h1>One platform.<br>Every <em>partner</em>, connected.</h1>
+      <p>Sign in to access AI-assisted product support, sale, engineer, services, maintenance insights, and dealer resources.</p>
+      <ul class="hero-points">
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5AB2F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Dealers &amp; affiliates: username, password and one-time passcode
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5AB2F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Daikin employees: single sign-on with Okta
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5AB2F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Role-based access to tools and data
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero-foot">Demo build for YSSA group "C" only.</div>
+  </aside>
+
+  <!-- right: sign-in card -->
+  <main class="stage">
+    <div class="card">
+      <h2>Sign in</h2>
+      <p class="sub">Choose your account type to continue.</p>
+
+      <div class="roles" role="tablist" aria-label="Account type">
+        <button type="button" class="active" data-role="dealer"    role="tab" aria-selected="true">Dealer</button>
+        <button type="button" data-role="affiliate" role="tab" aria-selected="false">Affiliate</button>
+        <button type="button" data-role="employee"  role="tab" aria-selected="false">Employee</button>
+      </div>
+
+      <!-- dealer / affiliate form -->
+      <form class="pane active" id="credForm" novalidate>
+        <label for="country">Country / Region</label>
+        <select id="country" name="country" required>
+          <option value="">Select your country…</option>
+          <option>Thailand</option>
+          <option>Singapore</option>
+          <option>Philippines</option>
+          <option>Indonesia</option>
+          <option>Cambodia</option>
+          <option>Australia</option>
+          <option>Viet Nam</option>
+          <option>Malaysia</option>
+          <option>India</option>
+          <!--<option>Tanzania</option>-->
+          <option>New Zealand</option>
+        </select>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" autocomplete="username" placeholder="Your username" required>
+
+        <label for="password">Password</label>
+        <div class="pw-row">
+          <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Your password" required>
+          <button type="button" class="pw-toggle" id="pwToggle" aria-label="Show password">SHOW</button>
+        </div>
+
+        <label for="passcode">Passcode</label>
+        <input type="text" id="passcode" name="passcode" inputmode="numeric" pattern="[0-9]{6}"
+               maxlength="6" placeholder="6-digit passcode" autocomplete="one-time-code" required>
+        <div class="hint">Enter the 6-digit passcode issued for your organization.</div>
+
+        <button type="submit" class="primary" id="signInBtn">Sign in</button>
+        <div class="msg" id="credMsg" role="alert"></div>
+      </form>
+
+      <!-- employee / Okta pane -->
+      <div class="pane" id="ssoPane">
+        <div class="sso-box">
+          <p>Daikin employees sign in with their corporate Okta account. You will be redirected to Okta to authenticate.</p>
+          <button type="button" class="okta-btn" id="oktaBtn">
+            <span class="okta-mark" aria-hidden="true"></span>
+            Sign in with Okta
+          </button>
+          <div class="sso-note">Use your <strong>@daikin</strong> corporate credentials. MFA may be required.</div>
+        </div>
+        <div class="msg" id="ssoMsg" role="alert"></div>
+      </div>
+
+      <!-- demo helper -->
+      <details class="demo-creds">
+        <summary>Demo credentials</summary>
+        <table>
+          <tr><th>Type</th><th>Country</th><th>Username</th><th>Password</th><th>Passcode</th></tr>
+          <tr><td>Dealer</td><td>Thailand</td><td><code>dealer01</code></td><td><code>Dealer#2026</code></td><td><code>123456</code></td></tr>
+          <tr><td>Dealer</td><td>Singapore</td><td><code>dealer02</code></td><td><code>Dealer#2026</code></td><td><code>222222</code></td></tr>
+          <tr><td>Affiliate</td><td>Viet Nam</td><td><code>affiliate01</code></td><td><code>Affil#2026</code></td><td><code>654321</code></td></tr>
+          <tr><td>Affiliate</td><td>Australia</td><td><code>affiliate02</code></td><td><code>Affil#2026</code></td><td><code>888888</code></td></tr>
+          <tr><td>Employee</td><td colspan="4">Click “Sign in with Okta Verify”</td></tr>
+        </table>
+      </details>
+
+      <div class="card-foot">
+        Trouble signing in? <a href="#" onclick="return false;">Contact your administrator</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/login.js"></script>
+<script src="js/pwa.js"></script>
+</body>
+</html>
