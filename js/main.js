@@ -12,7 +12,7 @@
   let session = null;
   try { session = JSON.parse(sessionStorage.getItem("dikonnect.session")); } catch(e){}
   if (!session){
-    try { window.location.replace("default.html"); } catch(e){}
+    try { window.location.replace("index.html"); } catch(e){}
   } else {
     document.getElementById("userName").textContent =
       session.fullname || session.displayName || session.username || "Guest";
@@ -21,7 +21,7 @@
   }
   function doLogout(){
     try { sessionStorage.removeItem("dikonnect.session"); } catch(e){}
-    try { window.location.href = "default.html"; } catch(e){}
+    try { window.location.href = "index.html"; } catch(e){}
   }
   document.getElementById("logoutBtn").addEventListener("click", doLogout);
   document.getElementById("menuLogoutBtn").addEventListener("click", doLogout);
